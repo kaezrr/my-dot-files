@@ -1,13 +1,34 @@
+let mapleader=" "
+
 set relativenumber
 set number
 
-let mapleader=" "
-
+"Go to previous or next tab"
 nnoremap H gT
 nnoremap L gt
 
-map gi :vsc Edit.GoToDefinition<cr>
-map gd :vsc Edit.GoToDeclaration<cr>
+"Move lines in visual mode"
+vnoremap J dpV']
+vnoremap K d-PV']
+
+"Cursor quality of life changes"
+nnoremap J mzJ`z 
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+"Cut without copying"
+xnoremap <leader>p \"_dP
+
+"Copy stuff into system clipboard instead of vim"
+vnoremap <leader>y \"+y
+nnoremap <leader>Y \"+Y
+nnoremap <leader>y \"+y
+
+"Visual Studio specific shortcuts
+nnoremap gi :vsc Edit.GoToDefinition<cr>
+nnoremap gd :vsc Edit.GoToDeclaration<cr>
 
 nnoremap <leader>f :vsc Edit.GoToFile<cr>
 nnoremap <leader>x :vsc Window.CloseDocumentWindow<cr>
