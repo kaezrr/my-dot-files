@@ -2,6 +2,7 @@ let mapleader=" "
 
 set relativenumber
 set number
+set scrolloff=7
 
 "Go to previous or next tab"
 nnoremap H gT
@@ -27,8 +28,8 @@ nnoremap <leader>Y \"+Y
 nnoremap <leader>y \"+y
 
 "Visual Studio specific shortcuts
-nnoremap gi :vsc Edit.GoToDefinition<cr>
-nnoremap gd :vsc Edit.GoToDeclaration<cr>
+nnoremap gd :vsc Edit.GoToDefinition<cr>
+nnoremap gi :vsc Edit.GoToDeclaration<cr>
 
 nnoremap <leader>f :vsc Edit.GoToFile<cr>
 nnoremap <leader>x :vsc Window.CloseDocumentWindow<cr>
@@ -40,5 +41,5 @@ nnoremap R :vsc Refactor.Rename<cr>
 nnoremap <leader>l :vsc View.ErrorList<cr>
 nnoremap <leader>e :vsc View.NextError<cr>
 nnoremap <leader>E :vsc View.PreviousError<cr>
-
 nnoremap <leader>b :vsc Debug.ToggleBreakpoint<cr>
+nnoremap <leader>i :vsc Edit.QuickInfo<cr>
