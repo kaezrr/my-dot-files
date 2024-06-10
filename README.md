@@ -1,1 +1,1 @@
-Currently only contains config for visual studio.
+My dotfiles and other personal files that I use to make my life easier
