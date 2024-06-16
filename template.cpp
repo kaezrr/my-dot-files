@@ -2,17 +2,18 @@
 
 using std::pair, std::string, std::array, std::vector;
 using ll    = long long int;
-using vint  = vector<int>;
+using ull   = unsigned long long int;
 using vll   = vector<ll>;
-using pint  = pair<int,int>;
 using pll   = pair<ll,ll>;
+using vint  = vector<int>;
+using pint  = pair<int,int>;
 
 constexpr auto nl = '\n';
-constexpr int MOD = 998244353;
-constexpr int INF = INT32_MAX / 2;
+constexpr ll MOD = 1000000007;
+constexpr ll INF = LLONG_MAX / 2;
 
-#define print_arr(x)    for(auto& e : (x)) { std::cout << e << ' '; }
-#define fill_arr(x)     for(auto& e : (x)) { std::cin >> e; }
+#define print_arr(x)    for(auto& ele : (x)) { std::cout << ele << ' '; }
+#define fill_arr(x)     for(auto& ele : (x)) { std::cin >> ele; }
 #define all(x)          (x).begin(), (x).end()
 #define rall(x)         (x).rbegin(), (x).rend()
 
@@ -32,9 +33,7 @@ struct custom_hash {
 
 
 void solve() {
-
-}  
-
+}
 
 int main() {
     std::cin.tie(0);
