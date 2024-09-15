@@ -38,14 +38,14 @@
         "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus || panelFocus)"
     },
     {
-        "key": "shift-l",
+        "key": "tab",
         "command": "workbench.action.nextEditorInGroup",
         "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
     },
     {
-        "key": "shift-h",
+        "key": "shift-tab",
         "command": "workbench.action.previousEditorInGroup",
-        "when": "(vim.mode == 'Normal || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
     },
     {
         "key": "space s g",
@@ -167,10 +167,5 @@
                 "workbench.action.closeOtherEditors"
             ]
         }
-    },
-    {
-        "key": "enter",
-        "command": "explorer.openAndPassFocus",
-        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
     },
 ]
