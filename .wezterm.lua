@@ -1,0 +1,64 @@
+-- Pull in the wezterm API
+local wezterm = require("wezterm")
+local act = wezterm.action
+-- This will hold the configuration.
+local config = wezterm.config_builder()
+
+config.max_fps = 144
+config.default_cursor_style = "BlinkingBlock"
+config.animation_fps = 1
+config.cursor_blink_rate = 500
+config.audible_bell = "Disabled"
+
+wezterm.font("JetBrainsMono Nerd Font Mono", {weight="Regular", stretch="Normal", style="Normal"})
+config.font_size = 12.0
+
+config.window_padding = {
+	left = 10,
+	right = 10,
+	top = 10,
+	bottom = 10,
+}
+
+-- tabs
+-- config.hide_tab_bar_if_only_one_tab = true
+ config.keys = {
+    { key = 'o', mods = 'ALT', action = act.SpawnTab 'CurrentPaneDomain' },
+    { key = 'x', mods = 'ALT', action = act.CloseCurrentTab{ confirm = true } },
+    { key = 'h', mods = 'ALT', action = act.ActivateTabRelative(-1) },
+    { key = 'l', mods = 'ALT', action = act.ActivateTabRelative(1) },
+    { key = 'o', mods = 'ALT|SHIFT', action = wezterm.action.ShowLauncher },
+}
+
+-- For example, changing the color scheme:
+config.color_scheme = 'Catppuccin Mocha'
+
+config.colors = {
+	tab_bar = {
+		active_tab = { bg_color = "#1e1e2e", fg_color = "#cccac2", },
+		inactive_tab = { bg_color = "#11111b", fg_color = "#bfbdb6", },
+	},
+}
+
+config.window_frame = {
+    font = wezterm.font("JetBrainsMono Nerd Font Mono", {weight="Regular", stretch="Normal", style="Normal"}),
+	active_titlebar_bg = "#11111b",
+    inactive_titlebar_bg = '#313244',
+}
+
+config.window_decorations = "INTEGRATED_BUTTONS | RESIZE"
+config.default_prog = { "ubuntu2404.exe" }
+
+config.launch_menu = {
+{
+  label = 'PowerShell',
+  args = { 'pwsh.exe', '-NoLogo' },
+},
+{
+  label = 'WSL',
+  args = { 'ubuntu2404.exe' },
+}
+};
+
+-- and finally, return the configuration to wezterm
+return config
