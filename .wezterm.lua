@@ -4,6 +4,7 @@ local act = wezterm.action
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
+config.front_end = "OpenGL"
 config.max_fps = 144
 config.default_cursor_style = "BlinkingBlock"
 config.animation_fps = 1
@@ -22,16 +23,10 @@ config.window_padding = {
 
 -- tabs
 -- config.hide_tab_bar_if_only_one_tab = true
- config.keys = {
-    { key = 'o', mods = 'ALT', action = act.SpawnTab 'CurrentPaneDomain' },
-    { key = 'x', mods = 'ALT', action = act.CloseCurrentTab{ confirm = true } },
-    { key = 'h', mods = 'ALT', action = act.ActivateTabRelative(-1) },
-    { key = 'l', mods = 'ALT', action = act.ActivateTabRelative(1) },
-    { key = 'o', mods = 'ALT|SHIFT', action = wezterm.action.ShowLauncher },
-}
 
 -- For example, changing the color scheme:
 config.color_scheme = 'Catppuccin Mocha'
+-- config.window_background_opacity = 0.9
 
 config.colors = {
 	tab_bar = {
