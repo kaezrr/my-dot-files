@@ -22,11 +22,10 @@ config.window_padding = {
 }
 
 -- tabs
--- config.hide_tab_bar_if_only_one_tab = true
+config.hide_tab_bar_if_only_one_tab = true
 
 -- For example, changing the color scheme:
-config.color_scheme = 'Catppuccin Mocha'
--- config.window_background_opacity = 0.9
+config.color_scheme = 'rose-pine'
 
 config.colors = {
 	tab_bar = {
